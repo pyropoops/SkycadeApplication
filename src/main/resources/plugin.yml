@@ -1,0 +1,7 @@
+name: SkycadeApplication
+version: ${project.version}
+main: net.saifs.skycadeapplication.SkycadeApplication
+api-version: 1.16.1
+description: A Spigot plugin used to showcase my developer skills in hope for a developer position at Skycade.
+author: 'Pyro#6252'
+
