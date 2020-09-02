@@ -14,6 +14,10 @@ public class ItemShopCommand implements CommandExecutor {
             SAMethods.send(sender, "&cYou must be a player to do that!");
             return true;
         }
+        if (!sender.hasPermission("sa.application.admin") && !sender.isOp()) {
+            SAMethods.send(sender, "&cYou do not have permission to do that!");
+            return true;
+        }
         Player player = (Player) sender;
         player.openInventory(SkycadeApplication.itemShopGUI.getPage(0));
         return true;
