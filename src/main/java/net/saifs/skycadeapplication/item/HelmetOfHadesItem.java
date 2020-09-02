@@ -11,9 +11,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class HelmetOfHadesItem extends Item implements IPlayerTickUpdater {
     private List<Player> users;
@@ -21,6 +19,10 @@ public class HelmetOfHadesItem extends Item implements IPlayerTickUpdater {
 
     public HelmetOfHadesItem() {
         super("helmet-of-hades");
+
+        this.users = new ArrayList<>();
+        this.inventories = new HashMap<>();
+
         SkycadeApplication.tickUpdateHandler.register(this);
     }
 
