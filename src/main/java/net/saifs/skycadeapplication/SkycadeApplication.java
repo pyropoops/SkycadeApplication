@@ -2,11 +2,12 @@ package net.saifs.skycadeapplication;
 
 import net.saifs.skycadeapplication.command.ItemShopCommand;
 import net.saifs.skycadeapplication.gui.ItemShopGUI;
-import net.saifs.skycadeapplication.item.Item;
+import net.saifs.skycadeapplication.utils.TickUpdateHandler;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SkycadeApplication extends JavaPlugin {
     public static ItemShopGUI itemShopGUI;
+    public static TickUpdateHandler tickUpdateHandler;
     private static SkycadeApplication instance;
 
     public static SkycadeApplication getInstance() {
@@ -17,6 +18,8 @@ public final class SkycadeApplication extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         instance = this;
+
+        tickUpdateHandler = new TickUpdateHandler();
 
         // register items here
 
