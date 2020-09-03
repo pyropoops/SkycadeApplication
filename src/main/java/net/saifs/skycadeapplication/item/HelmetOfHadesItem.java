@@ -1,19 +1,23 @@
 package net.saifs.skycadeapplication.item;
 
 import net.saifs.skycadeapplication.SkycadeApplication;
+import net.saifs.skycadeapplication.utils.SAMethods;
 import net.saifs.skycadeapplication.utils.interfaces.IPlayerTickUpdater;
 import org.bukkit.Color;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
 import java.util.*;
 
-public class HelmetOfHadesItem extends Item implements IPlayerTickUpdater {
+public class HelmetOfHadesItem extends Item implements IPlayerTickUpdater, Listener {
     private List<Player> users;
     private Map<UUID, ItemStack[]> inventories;
 
@@ -28,8 +32,12 @@ public class HelmetOfHadesItem extends Item implements IPlayerTickUpdater {
 
     @Override
     public ItemStack constructItem() {
-
-        return null;
+        ItemStack i = new ItemStack(Material.LEATHER_HELMET, 1);
+        ItemMeta meta = i.getItemMeta();
+        if (meta == null) return i;
+        meta.setDisplayName(SAMethods.colour("&6&lHELMET OF HADES"));
+        i.setItemMeta(meta);
+        return i;
     }
 
     private void setInvisible(Player player, boolean value) {

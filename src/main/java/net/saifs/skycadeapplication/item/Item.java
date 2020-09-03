@@ -3,7 +3,6 @@ package net.saifs.skycadeapplication.item;
 import net.saifs.skycadeapplication.SkycadeApplication;
 import net.saifs.skycadeapplication.nms.NMSHandler;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 

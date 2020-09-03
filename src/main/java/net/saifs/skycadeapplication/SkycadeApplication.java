@@ -3,6 +3,7 @@ package net.saifs.skycadeapplication;
 import net.saifs.skycadeapplication.command.ItemShopCommand;
 import net.saifs.skycadeapplication.gui.ItemShopGUI;
 import net.saifs.skycadeapplication.item.HelmetOfHadesItem;
+import net.saifs.skycadeapplication.item.TrackingBowItem;
 import net.saifs.skycadeapplication.utils.TickUpdateHandler;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -24,6 +25,7 @@ public final class SkycadeApplication extends JavaPlugin {
 
         // register items here
         new HelmetOfHadesItem();
+        new TrackingBowItem();
 
         itemShopGUI = new ItemShopGUI();
 
