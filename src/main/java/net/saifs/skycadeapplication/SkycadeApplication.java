@@ -1,6 +1,7 @@
 package net.saifs.skycadeapplication;
 
 import net.saifs.skycadeapplication.command.ItemShopCommand;
+import net.saifs.skycadeapplication.command.SACommandHandler;
 import net.saifs.skycadeapplication.gui.ItemShopGUI;
 import net.saifs.skycadeapplication.item.HelmetOfHadesItem;
 import net.saifs.skycadeapplication.item.TrackingBowItem;
@@ -29,7 +30,7 @@ public final class SkycadeApplication extends JavaPlugin {
 
         itemShopGUI = new ItemShopGUI();
 
-        getCommand("test").setExecutor(new ItemShopCommand());
+        getCommand("sa").setExecutor(new SACommandHandler());
     }
 
     @Override

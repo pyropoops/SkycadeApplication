@@ -5,5 +5,5 @@ api-version: 1.13
 description: A Spigot plugin used to showcase my developer skills in hope for a developer position at Skycade.
 author: 'Pyro#6252'
 commands:
-  test:
+  sa:
     usage: /test
